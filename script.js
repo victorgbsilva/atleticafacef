@@ -103,7 +103,7 @@ document.querySelectorAll('[data-carousel]').forEach(carousel => {
 // administrativas no servidor antes de disponibilizar informações restritas.
 const MANAGEMENT_ALLOWED_USERS = [
   // Adicione até 15 e-mails autorizados entre aspas, separados por vírgula:
-  // "usuario1@exemplo.com",
+  // "victorgabrielgomessilvavks@gmail.com",
   // "usuario2@exemplo.com",
   // "usuario3@exemplo.com",
   // "usuario4@exemplo.com",
