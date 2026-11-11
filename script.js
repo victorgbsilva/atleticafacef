@@ -51,3 +51,113 @@ const observer = new IntersectionObserver(entries => {
   });
 }, { rootMargin: '-35% 0px -55% 0px' });
 sections.forEach(section => observer.observe(section));
+
+// Carrosséis de eventos e conquistas: destaque central, laterais em profundidade.
+document.querySelectorAll('[data-carousel]').forEach(carousel => {
+  const cards = [...carousel.querySelectorAll('.event-card')];
+  const previous = carousel.querySelector('[data-carousel-prev]');
+  const next = carousel.querySelector('[data-carousel-next]');
+  const status = carousel.querySelector('.carousel-status');
+  if (!cards.length || !previous || !next || !status) return;
+
+  let activeIndex = 0;
+  let timer;
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  const show = index => {
+    activeIndex = (index + cards.length) % cards.length;
+    cards.forEach((card, i) => {
+      const offset = (i - activeIndex + cards.length) % cards.length;
+      const position = offset === 0 ? 'active' : offset === 1 ? 'next' : offset === cards.length - 1 ? 'previous' : 'hidden';
+      card.dataset.position = position;
+      card.setAttribute('aria-hidden', String(position !== 'active'));
+    });
+    status.textContent = `${String(activeIndex + 1).padStart(2, '0')} / ${String(cards.length).padStart(2, '0')}`;
+  };
+  const stop = () => window.clearInterval(timer);
+  const start = () => {
+    stop();
+    if (!reducedMotion) timer = window.setInterval(() => show(activeIndex + 1), 5200);
+  };
+
+  previous.addEventListener('click', () => { show(activeIndex - 1); start(); });
+  next.addEventListener('click', () => { show(activeIndex + 1); start(); });
+  carousel.addEventListener('mouseenter', stop);
+  carousel.addEventListener('mouseleave', start);
+  carousel.addEventListener('focusin', stop);
+  carousel.addEventListener('focusout', event => { if (!carousel.contains(event.relatedTarget)) start(); });
+
+  let touchStartX = 0;
+  carousel.addEventListener('touchstart', event => { touchStartX = event.changedTouches[0].clientX; }, { passive: true });
+  carousel.addEventListener('touchend', event => {
+    const delta = event.changedTouches[0].clientX - touchStartX;
+    if (Math.abs(delta) > 45) { show(activeIndex + (delta < 0 ? 1 : -1)); start(); }
+  }, { passive: true });
+
+  show(0);
+  start();
+});
+
+// A aba Gestão só aparece quando houver identidade vinda de um sistema de login.
+// Em um site estático, esta checagem controla apenas a interface. Proteja dados e páginas
+// administrativas no servidor antes de disponibilizar informações restritas.
+const MANAGEMENT_ALLOWED_USERS = [
+  // Adicione até 15 e-mails autorizados entre aspas, separados por vírgula:
+  // "usuario1@exemplo.com",
+  // "usuario2@exemplo.com",
+  // "usuario3@exemplo.com",
+  // "usuario4@exemplo.com",
+  // "usuario5@exemplo.com",
+  // "usuario6@exemplo.com",
+  // "usuario7@exemplo.com",
+  // "usuario8@exemplo.com",
+  // "usuario9@exemplo.com",
+  // "usuario10@exemplo.com",
+  // "usuario11@exemplo.com",
+  // "usuario12@exemplo.com",
+  // "usuario13@exemplo.com",
+  // "usuario14@exemplo.com",
+  // "usuario15@exemplo.com",
+];
+
+// O sistema de autenticação deve preencher window.XX_MARCO_AUTH.user.email após login.
+const authenticatedEmail = window.XX_MARCO_AUTH?.user?.email?.trim().toLowerCase();
+const managementTab = document.querySelector('[data-management-tab]');
+if (managementTab) {
+  const hasAccess = Boolean(authenticatedEmail) && MANAGEMENT_ALLOWED_USERS
+    .some(email => email.trim().toLowerCase() === authenticatedEmail);
+  managementTab.hidden = !hasAccess;
+}
+
+// Integração futura: clique sinaliza que o provedor de login deve iniciar o acesso.
+const athleteLoginButton = document.querySelector('[data-login-button]');
+const athleteGreeting = document.querySelector('[data-user-greeting]');
+const athleteName = document.querySelector('[data-user-name]');
+const athleteProfileLink = document.querySelector('[data-profile-link]');
+
+function setXXMarcoAthleteUser(user) {
+  const name = String(user?.name || user?.email || '').trim();
+  const email = String(user?.email || '').trim().toLowerCase();
+  const loggedIn = Boolean(name);
+  if (athleteLoginButton) athleteLoginButton.hidden = loggedIn;
+  if (athleteGreeting) athleteGreeting.hidden = !loggedIn;
+  if (athleteName) athleteName.textContent = loggedIn ? name : '';
+  if (athleteProfileLink) athleteProfileLink.href = loggedIn ? athleteProfileLink.dataset.authenticatedHref : 'login.html';
+  if (user) window.XX_MARCO_AUTH = { ...window.XX_MARCO_AUTH, user: { ...user, email } };
+  else if (window.XX_MARCO_AUTH) delete window.XX_MARCO_AUTH.user;
+  if (managementTab) {
+    managementTab.hidden = !email || !MANAGEMENT_ALLOWED_USERS.some(allowed => allowed.trim().toLowerCase() === email);
+  }
+}
+
+window.setXXMarcoAthleteUser = setXXMarcoAthleteUser;
+athleteLoginButton?.addEventListener('click', () => {
+  window.dispatchEvent(new CustomEvent('xxmarco:login-request'));
+  window.location.assign('login.html');
+});
+window.addEventListener('xxmarco:login-success', event => setXXMarcoAthleteUser(event.detail));
+window.addEventListener('xxmarco:logout', () => setXXMarcoAthleteUser(null));
+if (window.XX_MARCO_AUTH?.user) setXXMarcoAthleteUser(window.XX_MARCO_AUTH.user);
+else if (athleteProfileLink) athleteProfileLink.href = 'login.html';
+
+
