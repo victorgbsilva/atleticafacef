@@ -24,6 +24,26 @@ drawer.querySelectorAll('a').forEach(link => link.addEventListener('click', () =
 
 const sections = [...document.querySelectorAll('main section[id]')];
 const navLinks = [...document.querySelectorAll('.main-nav a')];
+const nav = document.querySelector('.main-nav');
+const navAxe = document.querySelector('.nav-axe');
+
+navLinks.forEach(link => link.addEventListener('click', event => {
+  const navBounds = nav.getBoundingClientRect();
+  const linkBounds = link.getBoundingClientRect();
+  navAxe.style.left = `${linkBounds.left - navBounds.left + linkBounds.width / 2}px`;
+  navAxe.classList.remove('swing');
+  void navAxe.offsetWidth;
+  navAxe.classList.add('swing');
+  const target = new URL(link.href, window.location.href);
+  if (target.pathname !== window.location.pathname) {
+    event.preventDefault();
+    const delay = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 520;
+    window.setTimeout(() => window.location.assign(target.href), delay);
+  }
+}));
+
+navAxe.addEventListener('animationend', () => navAxe.classList.remove('swing'));
+
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (!entry.isIntersecting) return;
