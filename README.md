@@ -4,7 +4,7 @@
 
 **Esporte, união e tradição.**
 
-Site institucional da Associação Atlética Acadêmica XX-Março.
+Site institucional da Associação Atlética Acadêmica XX DE MARÇO.
 
 </div>
 

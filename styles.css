@@ -514,3 +514,30 @@ section[id]{scroll-margin-top:130px}
 /* Balão temporário de sucesso após validar o código. */
 .auth-success{position:fixed;z-index:20;top:26px;left:50%;width:max-content;max-width:calc(100vw - 30px);margin:0;transform:translateX(-50%);animation:success-toast-in .35s ease-out both}
 @keyframes success-toast-in{from{opacity:0;transform:translate(-50%,-12px) scale(.96)}to{opacity:1;transform:translate(-50%,0) scale(1)}}
+
+/* Evita rolagem horizontal causada por elementos decorativos fora da viewport. */
+html,body{max-width:100%;overflow-x:clip}
+.site-shell{max-width:100%;overflow-x:clip}
+.event-carousel .event-cards{overflow:hidden}
+@media(max-width:760px){.event-carousel .event-cards{overflow:hidden}.event-carousel{max-width:100%}}
+
+/* Tela de login um pouco mais compacta em celulares. */
+@media(max-width:520px){.auth-screen{padding:66px 14px 38px}.auth-panel{width:min(100%,390px);padding:22px 20px 21px}.auth-logo{width:74px;height:74px;margin-bottom:8px}.auth-panel h1{margin:8px 0 18px;font-size:39px}.auth-tabs{margin:17px 0 15px}.auth-tab{min-height:37px}.auth-form{gap:8px}.auth-form input{height:43px}.auth-submit{margin-top:9px;padding:12px 14px}}
+@media(max-width:420px){.auth-screen{padding:62px 12px 34px}.auth-panel{padding:20px 17px 18px}.auth-logo{width:68px;height:68px}.auth-panel h1{font-size:36px}.auth-form label{font-size:10px}.auth-form input{height:41px;font-size:12px}.auth-footer{font-size:7px}}
+
+/* Botões Entrar e Menu com as mesmas dimensões em cada largura. */
+.menu-toggle{width:94px;height:48px}
+@media(max-width:1100px){.menu-toggle{width:84px;height:44px}}
+@media(max-width:760px) and (min-width:621px){.menu-toggle{width:38px;height:38px}.menu-lines{gap:3px}.menu-lines i{width:16px;height:2px}.menu-arrow{font-size:22px}}
+@media(max-width:620px){.menu-toggle{width:38px;height:38px}.menu-lines{gap:3px}.menu-lines i{width:16px;height:2px}.menu-arrow{font-size:22px}}
+@media(max-width:420px){.menu-toggle{width:38px;height:38px}}
+
+/* O menu continua quadrado e acompanha a altura do botão Entrar. */
+.menu-toggle{width:48px;height:48px;gap:3px}
+.menu-toggle .menu-lines{gap:3px}
+.menu-toggle .menu-lines i{width:18px;height:2px}
+.menu-toggle .menu-arrow{font-size:24px}
+@media(max-width:1100px){.menu-toggle{width:44px;height:44px}}
+@media(max-width:760px) and (min-width:621px){.menu-toggle{width:38px;height:38px}}
+@media(max-width:620px){.menu-toggle{width:38px;height:38px}}
+@media(max-width:420px){.menu-toggle{width:38px;height:38px}}
