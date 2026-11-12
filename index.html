@@ -46,7 +46,7 @@
           <figure class="photo photo-six"><img src="assets/equipe-feminina-volei.jpeg" alt="Equipe feminina de vôlei reunida na quadra"></figure>
         </div>
         <div class="hero-shade"></div>
-        <div class="hero-copy"><p class="eyebrow"><span></span> ASSOCIAÇÃO ATLÉTICA ACADÊMICA</p><h1>VIKING É QUEM<br><em>CARREGA A XX</em><br>DE MARÇO NO<br><em>PEITO.</em></h1><div class="hero-actions"><a class="hero-cta" href="https://chat.whatsapp.com/GGvUnVGUspL53viDDeiQgG" target="_blank" rel="noopener noreferrer">Entre no grupo da delegação <b>↗</b></a></div></div>
+        <div class="hero-copy"><p class="eyebrow"><span></span> ASSOCIAÇÃO ATLÉTICA ACADÊMICA</p><h1><button class="hero-viking-word" type="button" data-game-open aria-haspopup="dialog" aria-controls="viking-game" aria-label="Abrir jogo do Viking">VIKING</button> É QUEM<br><em>CARREGA A XX</em><br>DE MARÇO NO<br><em>PEITO.</em></h1><div class="hero-actions"><a class="hero-cta" href="https://chat.whatsapp.com/GGvUnVGUspL53viDDeiQgG" target="_blank" rel="noopener noreferrer">Entre no grupo da delegação <b>↗</b></a></div></div>
       </section>
 
       <section class="events section-wrap" id="em-quadra">
@@ -97,6 +97,11 @@
     <nav aria-label="Menu da conta"><a href="login.html" data-profile-link data-authenticated-href="#perfil">Perfil<i>↗</i></a><a href="#carrinho">Carrinho<i>↗</i></a><a href="#historico">Histórico<i>↗</i></a><a href="#gestao" data-management-tab hidden>Gestão<i>↗</i></a></nav>
     <div class="drawer-foot"><span>AAA XX DE MARÇO</span><span>JUNTOS SOMOS MAIS.</span></div>
   </aside>
+  <dialog class="viking-game" id="viking-game" aria-labelledby="viking-game-title">
+    <div class="game-heading"><div><span>DESAFIO DA ATLÉTICA</span><h2 id="viking-game-title">Corrida Viking</h2></div><button class="game-close" type="button" data-game-close aria-label="Fechar jogo">×</button></div>
+    <div class="game-stage"><canvas class="game-canvas" data-game-canvas aria-label="Jogo de corrida do Viking"></canvas><div class="game-overlay" data-game-overlay hidden><p data-game-result>Fim de jogo</p><strong data-game-final-score>0000</strong><button type="button" data-game-restart>Jogar novamente <span>↻</span></button></div></div>
+    <div class="game-instructions"><span><b>↑</b> pular</span><span><b>↓</b> descer / agachar</span><span class="touch-instruction">1 toque: pular · 2 toques: descer / agachar</span><span class="keyboard-instruction">Use as setas do teclado</span><span class="game-score" data-game-score>PONTOS&nbsp; 0000</span></div>
+  </dialog>
   <script src="script.js"></script>
 </body>
 </html>

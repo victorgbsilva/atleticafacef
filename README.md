@@ -16,6 +16,7 @@ Uma página para apresentar a atlética, seus esportes, eventos, conquistas e eq
 
 - **Página inicial:** mosaico de fotos, eventos, esportes e chamadas para contato.
 - **Carrosséis:** imagens de eventos e conquistas com avanço automático, controles e gesto de deslizar no celular.
+- **Jogo do Viking:** corrida estilo endless runner com sprites em pixel art, animação de agachamento, salto pelas setas no computador e gestos de toque no celular.
 - **Quem Somos:** apresentação da atlética e cartões da equipe separados por Diretoria Geral, Gestão e Diretoria Esportiva.
 - **Área do Atleta:** menu de perfil, carrinho, histórico e acesso de Gestão condicionado à lista de usuários autorizados.
 - **Login e cadastro:** telas estáticas com formulário de verificação por código, preparadas para futura integração com autenticação e envio de e-mail.
@@ -51,7 +52,7 @@ assets/          Fotos, escudos e ícones
 
 Login, cadastro, envio e validação de código por e-mail ainda são apenas interfaces e dependem de um serviço de autenticação conectado.
 
-A aba Gestão também depende de autenticação. A lista comentada em `script.js` serve para configurar a exibição da aba, mas o controle real de acesso a dados deve ser validado no servidor.
+A aba Gestão também depende de autenticação. A lista de usuários permitidos em `script.js` controla a exibição da aba, mas o acesso real a dados deve ser validado no servidor.
 
 ---
 

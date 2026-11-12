@@ -187,14 +187,12 @@ footer .partner-logo { display: block; width: 130px; height: auto; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; }
 }
-/* Ocupa toda a janela sem perder o comportamento responsivo. */
 html{min-height:100%;scroll-padding-top:16px}
 body{min-width:320px;min-height:100vh;background:var(--navy)}
 .site-shell{width:100%;max-width:none;min-height:100vh;margin:0;border:0;box-shadow:none}
 .hero{min-height:max(560px,min(780px,calc(100svh - 112px)))}
 @media(max-width:760px){.hero{min-height:max(540px,calc(100svh - 124px))}}
 @media(max-width:420px){.hero{min-height:max(520px,calc(100svh - 124px))}}
-/* Navegação minimalista e ação do machado no clique. */
 .main-nav{position:relative}
 .nav-link{overflow:visible;color:#e6edf6;transform:none}
 .nav-link::before{left:0;right:0;bottom:4px;height:1px;background:var(--yellow);transform:scaleX(0);transform-origin:left}
@@ -213,7 +211,6 @@ body{min-width:320px;min-height:100vh;background:var(--navy)}
 .event-gatherings .section-heading h2 em{color:#fff}
 @media(max-width:620px){.nav-axe{top:-17px;width:23px;height:22px}}
 @media(prefers-reduced-motion:reduce){.nav-axe.swing{animation:none;opacity:1;transform:translateX(-50%)}}
-/* Página independente de apresentação da atlética. */
 .about-page{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.9fr);align-items:center;gap:8%;min-height:calc(100svh - 112px);padding:82px 8%;background:var(--navy);color:var(--white)}
 .about-copy h1{margin:34px 0 24px;font:800 clamp(60px,8vw,104px)/.86 var(--font-display);letter-spacing:-.02em}
 .about-copy h1 span{color:var(--yellow)}
@@ -222,7 +219,6 @@ body{min-width:320px;min-height:100vh;background:var(--navy)}
 .about-image{position:relative;aspect-ratio:4/3;margin:0;overflow:hidden;border:6px solid var(--yellow);background:var(--blue-deep)}
 .about-image img{display:block;width:100%;height:100%;object-fit:cover;object-position:center}
 
-/* A chamada final e o rodapé formam uma única faixa escura após os eventos. */
 .contact{display:flex;min-height:410px;flex-direction:column;align-items:stretch;justify-content:space-between;gap:62px;padding:76px 8% 20px;background:var(--navy);color:var(--white)}
 .contact-main{display:flex;align-items:end;justify-content:space-between;gap:28px}
 .contact .eyebrow{color:#e8eef5}
@@ -293,7 +289,6 @@ section[id]{scroll-margin-top:130px}
 .team-card-polaroid .team-photo{width:100%;height:auto;aspect-ratio:1/1;flex:0 0 auto}
 .team-card-polaroid .team-photo img{display:block;width:100%;height:100%;object-fit:cover}
 .team-card-polaroid .team-info{display:flex;min-height:122px;flex:1;flex-direction:column;align-items:center;justify-content:center}
-/* Padronização final dos cartões polaroid da equipe. */
 .team-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(280px,100%),380px));justify-content:start;align-items:stretch;gap:20px}
 .team-card-polaroid{display:flex;width:100%;height:auto;min-height:0;flex-direction:column;align-self:stretch;padding:8px 8px 0;border:1px solid #dbe2e9;border-bottom:2px solid var(--yellow);background:#fff;box-shadow:0 8px 22px #001a3540}
 .team-card-polaroid .team-photo{display:block;width:100%;height:auto;aspect-ratio:1/1;flex:0 0 auto;margin:0;padding:0;border:0;overflow:hidden;background:#dce4eb}
@@ -318,7 +313,6 @@ section[id]{scroll-margin-top:130px}
 .brand:hover .brand-title,.brand:focus-visible .brand-title{padding-left:24px}
 .brand:hover .brand-axe,.brand:focus-visible .brand-axe{opacity:1;transform:translateY(-50%) rotate(0) scale(1)}
 @media(max-width:620px){.brand-title{bottom:2px;font-size:11px;padding:3px 6px}.brand .brand-axe{width:13px;height:13px}}
-/* XX de Março ao lado do escudo, com o mesmo efeito visual do botão amarelo. */
 .brand{position:relative;display:flex;width:auto;height:98px;max-width:none;flex:0 0 auto;flex-direction:row;align-items:center;justify-content:flex-start;gap:8px;transition:transform .22s,filter .22s}
 .brand>img{display:block;width:112px;height:92px;flex:0 0 auto;object-fit:contain;transform:scale(1.08)}
 .brand-title{position:relative;left:auto;bottom:auto;display:inline-flex;align-items:center;white-space:nowrap;padding:4px 7px 4px 12px;border:0;border-left:2px solid var(--yellow);background:transparent;color:var(--yellow);font:700 15px/1 var(--font-display);transform:none;transition:padding .22s,color .22s}
@@ -330,7 +324,6 @@ section[id]{scroll-margin-top:130px}
 @media(max-width:760px){.brand{height:72px;gap:6px}.brand>img{width:86px;height:70px}.brand-title{font-size:13px;padding-right:5px;padding-left:9px}}
 @media(max-width:620px){.brand{height:66px}.brand>img{width:78px;height:64px}.brand-title{font-size:12px}}
 @media(max-width:420px){.brand{height:60px;gap:4px}.brand>img{width:64px;height:58px}.brand-title{font-size:11px;padding-right:3px;padding-left:7px}.brand:hover,.brand:focus-visible{transform:scale(1.02);filter:drop-shadow(2px 2px 0 #fff)}}
-/* Animação somente no escudo; a escrita apenas cresce suavemente. */
 .brand:hover,.brand:focus-visible{transform:none;filter:none}
 .brand>img:first-child{transition:transform .3s cubic-bezier(.2,.8,.2,1),filter .3s;transform:scale(1.08)}
 .brand:hover>img:first-child,.brand:focus-visible>img:first-child{transform:scale(1.15) rotate(-3deg);filter:drop-shadow(4px 4px 0 #fff)}
@@ -348,11 +341,9 @@ section[id]{scroll-margin-top:130px}
 .brand:hover .brand-title .brand-axe,.brand:focus-visible .brand-title .brand-axe{opacity:1;transform:translateY(-50%) rotate(12deg) scale(1)}
 @media(max-width:620px){.brand-title .brand-axe{left:auto;right:-18px;width:14px;height:14px}}
 
-/* Títulos dos três cards de eventos em branco. */
 .event-gatherings .event-card h3{color:#fff}
 
 
-/* Marca mais à esquerda e com o escudo ligeiramente maior. */
 .brand{margin-left:-1.5%}
 .brand>img:first-child{width:126px;height:100px}
 @media(max-width:1100px){.brand{margin-left:-1%}.brand>img:first-child{width:110px;height:88px}}
@@ -360,7 +351,6 @@ section[id]{scroll-margin-top:130px}
 @media(max-width:620px){.brand>img:first-child{width:84px;height:68px}}
 @media(max-width:420px){.brand>img:first-child{width:70px;height:58px}}
 
-/* Destaque animado para o nome ao lado do escudo. */
 .brand-title{font-size:22px;animation:brandTitleColor 3.2s ease-in-out infinite}
 @keyframes brandTitleColor{0%,100%{color:#fff}50%{color:var(--yellow)}}
 @media(max-width:1100px){.brand-title{font-size:19px}}
@@ -368,12 +358,10 @@ section[id]{scroll-margin-top:130px}
 @media(max-width:620px){.brand-title{font-size:14px}}
 @media(max-width:420px){.brand-title{font-size:12px}}
 
-/* Navegação centralizada e com espaçamento uniforme. */
 @media(min-width:761px){.main-nav{flex:1;justify-content:center;gap:clamp(12px,2vw,30px);margin:0 24px}}
 @media(max-width:760px) and (min-width:621px){.main-nav{flex:1;justify-content:center;gap:clamp(2px,1vw,10px);margin:0 8px}}
 @media(max-width:620px){.main-nav{justify-content:space-evenly;gap:0;margin:0}}
 
-/* Links da navegação um pouco maiores, com hover mais perceptível. */
 .nav-link{padding:13px 17px;font-size:12px;transition:color .22s,transform .24s cubic-bezier(.2,.8,.2,1)}
 .nav-link::before{height:2px;transition:transform .28s cubic-bezier(.2,.8,.2,1)}
 .nav-link:hover,.nav-link:focus-visible{color:var(--yellow);transform:translateY(-2px) scale(1.06)}
@@ -389,7 +377,6 @@ section[id]{scroll-margin-top:130px}
 .hero-actions .hero-cta{margin-top:0}
 @media(max-width:760px){.hero-actions{gap:8px;margin-top:24px}}
 
-/* Nossa equipe organizada em categorias com cartões centralizados. */
 .team-category{margin-top:46px}
 .team-category-heading{margin:0 auto 22px;text-align:center}
 .team-category-heading h3{margin:0;color:var(--yellow);font:800 clamp(28px,3vw,38px)/1 var(--font-display);text-transform:uppercase}
@@ -399,10 +386,8 @@ section[id]{scroll-margin-top:130px}
 @media(max-width:900px){.team-category .team-card{flex-basis:calc(50% - 10px)}}
 @media(max-width:520px){.team-category{margin-top:36px}.team-category .team-card{flex-basis:min(100%,380px)}}
 
-/* Mantém visíveis os rostos da fileira superior na foto feminina do topo. */
 .photo-three img{object-position:center top}
 
-/* Carrossel em perspectiva para eventos e conquistas. */
 .event-carousel{position:relative;margin-top:4px;perspective:1400px}
 .event-carousel .event-cards{position:relative;display:block;height:430px;overflow:visible;isolation:isolate}
 .event-carousel .event-card{position:absolute;top:18px;left:50%;width:min(62%,550px);height:370px;min-height:0;aspect-ratio:auto;margin:0;padding:24px;transform-style:preserve-3d;transition:transform .65s cubic-bezier(.2,.75,.2,1),filter .5s,opacity .5s,box-shadow .5s;will-change:transform,filter}
@@ -421,12 +406,10 @@ section[id]{scroll-margin-top:130px}
 @media(max-width:420px){.event-carousel .event-cards{height:300px}.event-carousel .event-card{height:260px}}
 @media(prefers-reduced-motion:reduce){.event-carousel .event-card{transition:none}}
 
-/* Controles azuis no carrossel de festas para contrastar com o fundo amarelo. */
 .event-gatherings .carousel-button{border-color:var(--navy);color:var(--navy)}
 .event-gatherings .carousel-button:hover,.event-gatherings .carousel-button:focus-visible{background:var(--navy);color:var(--yellow)}
 .event-gatherings .carousel-status{color:var(--navy)}
 
-/* Botão de login e identificação do atleta junto ao menu. */
 .header-actions{display:flex;align-items:center;gap:10px;flex:0 0 auto}
 .login-button,.user-greeting{display:flex;min-width:112px;height:58px;align-items:center;justify-content:center;gap:9px;padding:0 12px;border:0;background:var(--yellow);color:var(--navy);font:700 11px/1 var(--font-body);text-decoration:none}
 .login-button{cursor:pointer;transition:transform .22s,box-shadow .22s}
@@ -441,14 +424,12 @@ section[id]{scroll-margin-top:130px}
 @media(max-width:420px){.site-header{grid-template-columns:minmax(0,1fr) auto}.header-actions{gap:5px}.login-button,.user-greeting,.menu-toggle{height:38px;min-height:38px}.login-button,.user-greeting{min-width:38px;padding:0 6px}.user-greeting{max-width:105px}.user-greeting [data-user-name]{max-width:64px}.menu-toggle{width:38px}}
 @media(max-width:760px){.login-button{width:42px;min-width:42px;padding:0}.login-button [data-login-label]{display:none}}
 
-/* Ajuste do botão Entrar e ícone azul. */
 .login-button{min-width:94px;height:48px;gap:7px;padding:0 9px}
 .login-button .login-icon,.user-greeting .login-icon{width:21px;height:21px;filter:brightness(0) saturate(100%) invert(16%) sepia(77%) saturate(1574%) hue-rotate(186deg) brightness(90%) contrast(103%)}
 @media(max-width:1100px){.login-button{min-width:84px;height:44px}}
 @media(max-width:760px) and (min-width:621px){.login-button{width:38px;min-width:38px;height:38px;padding:0}.login-button .login-icon{width:19px;height:19px}}
 @media(max-width:620px){.login-button{width:38px;min-width:38px;height:38px;padding:0}.login-button .login-icon{width:18px;height:18px}}
 
-/* Página estática de login e cadastro. */
 .login-page{min-height:100vh;background:var(--navy)}
 .auth-screen{position:relative;display:grid;min-height:100svh;place-items:center;padding:42px 18px;background:linear-gradient(135deg,#031b36dd,#052d59c9),url("assets/conquista.jpeg") center 42%/cover fixed}
 .auth-back{position:absolute;top:26px;left:clamp(20px,5vw,72px);color:#fff;text-decoration:none;font-size:12px;font-weight:700;transition:color .2s,transform .2s}
@@ -479,7 +460,6 @@ section[id]{scroll-margin-top:130px}
 .auth-footer{position:absolute;right:20px;bottom:12px;left:20px;margin:0;color:#ffffffb0;font-size:8px;font-weight:700;letter-spacing:.14em;text-align:center}
 @media(max-width:520px){.auth-screen{padding:72px 15px 44px;background-attachment:scroll}.auth-panel{padding:26px 23px 24px;border-radius:18px}.auth-logo{width:82px;height:82px}.auth-panel h1{font-size:42px}.auth-back{top:24px;left:20px}}
 
-/* Guias independentes para Login e Cadastro. */
 .auth-tabs{display:grid;grid-template-columns:1fr 1fr;gap:4px;margin:23px 0 20px;padding:4px;border:1px solid #ffffff32;border-radius:10px;background:#021d3d88}
 .auth-tab{min-height:40px;border:0;border-radius:7px;background:transparent;color:#cfdae7;font:700 11px var(--font-body);letter-spacing:.08em;text-transform:uppercase;cursor:pointer;transition:background .2s,color .2s,transform .2s}
 .auth-tab:hover{color:#fff;transform:translateY(-1px)}
@@ -511,28 +491,23 @@ section[id]{scroll-margin-top:130px}
 .auth-success img{width:19px;height:19px;flex:0 0 auto;object-fit:contain;filter:brightness(0) invert(1) drop-shadow(0 1px 1px #052d59)}
 @media(max-width:420px){.auth-success{gap:8px;padding:11px 9px;font-size:11px}.auth-success img{width:16px;height:16px}}
 
-/* Balão temporário de sucesso após validar o código. */
 .auth-success{position:fixed;z-index:20;top:26px;left:50%;width:max-content;max-width:calc(100vw - 30px);margin:0;transform:translateX(-50%);animation:success-toast-in .35s ease-out both}
 @keyframes success-toast-in{from{opacity:0;transform:translate(-50%,-12px) scale(.96)}to{opacity:1;transform:translate(-50%,0) scale(1)}}
 
-/* Evita rolagem horizontal causada por elementos decorativos fora da viewport. */
 html,body{max-width:100%;overflow-x:clip}
 .site-shell{max-width:100%;overflow-x:clip}
 .event-carousel .event-cards{overflow:hidden}
 @media(max-width:760px){.event-carousel .event-cards{overflow:hidden}.event-carousel{max-width:100%}}
 
-/* Tela de login um pouco mais compacta em celulares. */
 @media(max-width:520px){.auth-screen{padding:66px 14px 38px}.auth-panel{width:min(100%,390px);padding:22px 20px 21px}.auth-logo{width:74px;height:74px;margin-bottom:8px}.auth-panel h1{margin:8px 0 18px;font-size:39px}.auth-tabs{margin:17px 0 15px}.auth-tab{min-height:37px}.auth-form{gap:8px}.auth-form input{height:43px}.auth-submit{margin-top:9px;padding:12px 14px}}
 @media(max-width:420px){.auth-screen{padding:62px 12px 34px}.auth-panel{padding:20px 17px 18px}.auth-logo{width:68px;height:68px}.auth-panel h1{font-size:36px}.auth-form label{font-size:10px}.auth-form input{height:41px;font-size:12px}.auth-footer{font-size:7px}}
 
-/* Botões Entrar e Menu com as mesmas dimensões em cada largura. */
 .menu-toggle{width:94px;height:48px}
 @media(max-width:1100px){.menu-toggle{width:84px;height:44px}}
 @media(max-width:760px) and (min-width:621px){.menu-toggle{width:38px;height:38px}.menu-lines{gap:3px}.menu-lines i{width:16px;height:2px}.menu-arrow{font-size:22px}}
 @media(max-width:620px){.menu-toggle{width:38px;height:38px}.menu-lines{gap:3px}.menu-lines i{width:16px;height:2px}.menu-arrow{font-size:22px}}
 @media(max-width:420px){.menu-toggle{width:38px;height:38px}}
 
-/* O menu continua quadrado e acompanha a altura do botão Entrar. */
 .menu-toggle{width:48px;height:48px;gap:3px}
 .menu-toggle .menu-lines{gap:3px}
 .menu-toggle .menu-lines i{width:18px;height:2px}
@@ -541,3 +516,33 @@ html,body{max-width:100%;overflow-x:clip}
 @media(max-width:760px) and (min-width:621px){.menu-toggle{width:38px;height:38px}}
 @media(max-width:620px){.menu-toggle{width:38px;height:38px}}
 @media(max-width:420px){.menu-toggle{width:38px;height:38px}}
+.hero-viking-word{appearance:none;display:inline-block;padding:0;border:0;background:transparent;color:inherit;font:inherit;line-height:inherit;letter-spacing:inherit;text-shadow:inherit;text-align:left;cursor:pointer;user-select:none;transform-origin:left center;transition:transform .28s cubic-bezier(.2,.8,.2,1)}
+.hero-viking-word:hover{transform:scale(1.1)}
+.hero-viking-word:focus-visible{outline:2px solid var(--yellow);outline-offset:5px}
+@media(max-width:760px){.hero-viking-word:hover{transform:scale(1.06)}}
+.viking-game{width:min(940px,calc(100vw - 32px));max-width:none;max-height:calc(100dvh - 32px);padding:0;overflow:hidden;border:1px solid #ffffff32;background:#052d59;color:#fff;box-shadow:0 24px 90px #0009}
+.viking-game[open]{display:block;animation:game-enter .28s cubic-bezier(.2,.8,.2,1) both}
+.viking-game::backdrop{background:#03172bd9;backdrop-filter:blur(5px)}
+@keyframes game-enter{from{opacity:0;transform:translateY(16px) scale(.98)}to{opacity:1;transform:translateY(0) scale(1)}}
+.game-heading{display:flex;align-items:center;justify-content:space-between;padding:19px 24px 15px;border-bottom:1px solid #ffffff20}
+.game-heading span{color:var(--yellow);font-size:9px;font-weight:700;letter-spacing:.18em}
+.game-heading h2{margin:3px 0 0;font:800 29px/.95 var(--font-display);text-transform:uppercase}
+.game-close{display:grid;width:38px;height:38px;place-items:center;border:1px solid #ffffff55;background:transparent;color:#fff;font:28px/1 var(--font-body);cursor:pointer;transition:background .2s,color .2s,transform .2s}
+.game-close:hover{transform:rotate(90deg);background:var(--yellow);color:var(--navy)}
+.game-stage{position:relative;margin:18px 20px 0;overflow:hidden;border:1px solid #ffd00080;background:#061b34}
+.game-canvas{display:block;width:100%;height:auto;aspect-ratio:960/360;touch-action:manipulation;image-rendering:pixelated}
+.game-overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:10px;background:#041a32d9;text-align:center}
+.game-overlay[hidden]{display:none}
+.game-overlay p{margin:0;color:var(--yellow);font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase}
+.game-overlay strong{font:900 52px/.9 var(--font-display)}
+.game-overlay button{display:flex;align-items:center;gap:18px;margin-top:8px;padding:12px 17px;border:0;background:var(--yellow);color:var(--navy);font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;transition:transform .2s,box-shadow .2s}
+.game-overlay button:hover{transform:translateY(-2px);box-shadow:4px 4px 0 #fff}
+.game-overlay button span{font-size:17px}
+.game-instructions{display:flex;align-items:center;gap:22px;padding:14px 22px 18px;color:#c6d5e5;font-size:10px;font-weight:600;letter-spacing:.06em}
+.game-instructions>span{display:inline-flex;align-items:center;gap:7px}
+.game-instructions b{display:inline-grid;width:21px;height:21px;place-items:center;background:var(--yellow);color:var(--navy);font-size:14px}
+.game-instructions .touch-instruction{display:none}
+.game-score{margin-left:auto;color:var(--yellow);font-size:9px;letter-spacing:.12em}
+@media(max-width:620px){.viking-game{width:calc(100vw - 20px);max-height:calc(100dvh - 20px)}.game-heading{padding:15px 16px 12px}.game-heading h2{font-size:25px}.game-stage{margin:12px 10px 0}.game-canvas{aspect-ratio:2/1}.game-instructions{flex-wrap:wrap;gap:8px 14px;padding:12px 12px 15px;font-size:9px}.game-instructions .touch-instruction{display:inline-flex;flex-basis:100%;order:2}.game-instructions .keyboard-instruction{display:none}.game-score{margin-left:auto}.game-overlay strong{font-size:43px}}
+@media(max-width:380px){.game-instructions{gap:7px 10px}.game-score{flex-basis:100%;margin:2px 0 0}}
+@media(prefers-reduced-motion:reduce){.viking-game[open]{animation:none}.game-close,.game-overlay button{transition:none}}
