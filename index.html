@@ -4,31 +4,33 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#06366b">
-  <link rel="icon" type="image/png" href="assets/escudo.png">
+  <link rel="icon" type="image/png" href="assets/images/escudo.png">
   <meta name="description" content="Associação Atlética Acadêmica XX DE MARÇO — esporte, união e conquistas." />
   <title>AAA XX DE MARÇO | Esporte e tradição</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles/styles.css?v=20261112-5">
+  <link rel="stylesheet" href="styles/game.css?v=20261112-1">
 </head>
 <body>
   <div class="site-shell">
     <header class="site-header" id="inicio">
-      <a class="brand" href="#inicio" aria-label="AAA XX DE MARÇO — início"><img src="assets/escudo.png" alt="Escudo da AAA XX DE MARÇO"><span class="brand-title"><img class="brand-axe" src="assets/machado-nav.png" alt="" aria-hidden="true">AAA XX DE MARÇO</span></a>
+      <a class="brand" href="#inicio" aria-label="AAA XX DE MARÇO — início"><img src="assets/images/escudo.png" alt="Escudo da AAA XX DE MARÇO"><span class="brand-title"><img class="brand-axe" src="assets/images/machado-nav.png" alt="" aria-hidden="true">AAA XX DE MARÇO</span></a>
       <nav class="main-nav" aria-label="Navegação principal">
         <a class="nav-link active" href="#inicio">Início</a>
         <a class="nav-link" href="#em-quadra">Esportes</a>
-        <a class="nav-link" href="#eventos">Eventos</a>
+        <a class="nav-link" href="eventos.html">Eventos</a>
+        <a class="nav-link" href="produtos.html">Produtos</a>
         <a class="nav-link" href="quem-somos.html">Quem somos</a>
         <a class="nav-link" href="#contato">Contato</a>
-        <img class="nav-axe" src="assets/machado-nav.png" alt="" aria-hidden="true">
+        <img class="nav-axe" src="assets/images/machado-nav.png" alt="" aria-hidden="true">
       </nav>
       <div class="header-actions">
         <button class="login-button" type="button" data-login-button aria-label="Entrar na Área do Atleta">
-          <img class="login-icon" src="assets/image-removebg-preview%20(1).png" alt="" aria-hidden="true"><span data-login-label>Entrar</span>
+          <img class="login-icon" src="assets/images/image-removebg-preview%20(1).png" alt="" aria-hidden="true"><span data-login-label>Entrar</span>
         </button>
-        <div class="user-greeting" data-user-greeting hidden><img class="login-icon" src="assets/image-removebg-preview%20(1).png" alt="" aria-hidden="true"><span data-user-name></span></div>
+        <div class="user-greeting" data-user-greeting hidden><img class="login-icon" src="assets/images/image-removebg-preview%20(1).png" alt="" aria-hidden="true"><span data-user-name></span></div>
         <button class="menu-toggle" type="button" aria-label="Abrir menu da conta" aria-expanded="false" aria-controls="account-menu">
           <span class="menu-lines"><i></i><i></i><i></i></span><span class="menu-arrow">‹</span>
         </button>
@@ -38,12 +40,12 @@
     <main>
       <section class="hero" aria-label="Destaques da AAA XX DE MARÇO">
         <div class="photo-grid">
-          <figure class="photo photo-one"><img src="assets/conquista.jpeg" alt="Atletas comemorando uma conquista"></figure>
-          <figure class="photo photo-two"><img src="assets/bandeira.jpeg" alt="Bandeira da AAA XX DE MARÇO"></figure>
-          <figure class="photo photo-three"><img src="assets/time-feminino.jpeg" alt="Equipe feminina reunida na quadra"></figure>
-          <figure class="photo photo-four"><img src="assets/time-basquete.jpeg" alt="Equipe de basquete com medalhas"></figure>
-          <figure class="photo photo-five"><img src="assets/equipe-quadra-completa.jpeg" alt="Equipe masculina reunida na quadra"></figure>
-          <figure class="photo photo-six"><img src="assets/equipe-feminina-volei.jpeg" alt="Equipe feminina de vôlei reunida na quadra"></figure>
+          <figure class="photo photo-one"><img src="assets/images/conquista.jpeg" alt="Atletas comemorando uma conquista"></figure>
+          <figure class="photo photo-two"><img src="assets/images/bandeira.jpeg" alt="Bandeira da AAA XX DE MARÇO"></figure>
+          <figure class="photo photo-three"><img src="assets/images/time-feminino.jpeg" alt="Equipe feminina reunida na quadra"></figure>
+          <figure class="photo photo-four"><img src="assets/images/time-basquete.jpeg" alt="Equipe de basquete com medalhas"></figure>
+          <figure class="photo photo-five"><img src="assets/images/equipe-quadra-completa.jpeg" alt="Equipe masculina reunida na quadra"></figure>
+          <figure class="photo photo-six"><img src="assets/images/equipe-feminina-volei.jpeg" alt="Equipe feminina de vôlei reunida na quadra"></figure>
         </div>
         <div class="hero-shade"></div>
         <div class="hero-copy"><p class="eyebrow"><span></span> ASSOCIAÇÃO ATLÉTICA ACADÊMICA</p><h1><button class="hero-viking-word" type="button" data-game-open aria-haspopup="dialog" aria-controls="viking-game" aria-label="Abrir jogo do Viking">VIKING</button> É QUEM<br><em>CARREGA A XX</em><br>DE MARÇO NO<br><em>PEITO.</em></h1><div class="hero-actions"><a class="hero-cta" href="https://chat.whatsapp.com/GGvUnVGUspL53viDDeiQgG" target="_blank" rel="noopener noreferrer">Entre no grupo da delegação <b>↗</b></a></div></div>
@@ -54,9 +56,9 @@
         <div class="section-heading"><h2>Energia que<br><em>vira conquista.</em></h2><p>O melhor da nossa jornada acontece quando estamos juntos.</p></div>
         <div class="event-carousel" data-carousel aria-label="Conquistas da equipe">
           <div class="event-cards" role="group" aria-label="Fotos do carrossel">
-          <article class="event-card"><img src="assets/conquista.jpeg" alt="Comemoração de vitória da equipe"><div class="card-meta"><span>ESPÍRITO CAMPEÃO</span></div><h3>Conquistas<br>que ficam.</h3></article>
-          <article class="event-card"><img src="assets/time-feminino.jpeg" alt="Equipe feminina em jogo"><div class="card-meta"><span>NA QUADRA</span></div><h3>Jogo, raça<br>e união.</h3></article>
-          <article class="event-card"><img src="assets/equipe-em-uniao.jpeg" alt="Equipe reunida em um abraço antes do jogo"><div class="card-meta"><span>SEMPRE JUNTOS</span></div><h3>Uma história<br>em movimento.</h3></article>
+          <article class="event-card"><img src="assets/images/conquista.jpeg" alt="Comemoração de vitória da equipe"><div class="card-meta"><span>ESPÍRITO CAMPEÃO</span></div><h3>Conquistas<br>que ficam.</h3></article>
+          <article class="event-card"><img src="assets/images/time-feminino.jpeg" alt="Equipe feminina em jogo"><div class="card-meta"><span>NA QUADRA</span></div><h3>Jogo, raça<br>e união.</h3></article>
+          <article class="event-card"><img src="assets/images/equipe-em-uniao.jpeg" alt="Equipe reunida em um abraço antes do jogo"><div class="card-meta"><span>SEMPRE JUNTOS</span></div><h3>Uma história<br>em movimento.</h3></article>
           </div>
           <div class="carousel-controls">
             <button class="carousel-button" type="button" data-carousel-prev aria-label="Foto anterior">←</button>
@@ -71,9 +73,9 @@
         <div class="section-heading"><h2>Festas que viram<br><em>memória.</em></h2><p>Encontros, torcida e bons momentos com a nossa galera.</p></div>
         <div class="event-carousel" data-carousel aria-label="Eventos e festas">
           <div class="event-cards" role="group" aria-label="Fotos do carrossel">
-          <article class="event-card party-card"><img src="assets/festa-xx-marco.jpeg" alt="Integrantes da XX DE MARÇO em uma festa"><div class="card-meta"><span>FESTA XX DE MARÇO</span></div><h3>Festa boa<br>é com a gente.</h3></article>
-          <article class="event-card party-card"><img src="assets/festa-torcida.jpeg" alt="Torcida reunida em uma festa"><div class="card-meta"><span>NOSSA GALERA</span></div><h3>Celebrar<br>também é nosso.</h3></article>
-          <article class="event-card party-card"><img src="assets/evento-galera.jpeg" alt="Integrantes da equipe reunidos em um evento"><div class="card-meta"><span>NOSSO TIME</span></div><h3>Juntos em<br>cada momento.</h3></article>
+          <article class="event-card party-card"><img src="assets/images/festa-xx-marco.jpeg" alt="Integrantes da XX DE MARÇO em uma festa"><div class="card-meta"><span>FESTA XX DE MARÇO</span></div><h3>Festa boa<br>é com a gente.</h3></article>
+          <article class="event-card party-card"><img src="assets/images/festa-torcida.jpeg" alt="Torcida reunida em uma festa"><div class="card-meta"><span>NOSSA GALERA</span></div><h3>Celebrar<br>também é nosso.</h3></article>
+          <article class="event-card party-card"><img src="assets/images/evento-galera.jpeg" alt="Integrantes da equipe reunidos em um evento"><div class="card-meta"><span>NOSSO TIME</span></div><h3>Juntos em<br>cada momento.</h3></article>
           </div>
           <div class="carousel-controls">
             <button class="carousel-button" type="button" data-carousel-prev aria-label="Foto anterior">←</button>
@@ -85,7 +87,7 @@
 
       <section class="contact section-wrap" id="contato">
         <div class="contact-main"><div><p class="eyebrow">AAA XX DE MARÇO · DESDE SEMPRE</p><h2><span class="contact-highlight">Se torne um</span><br><em>dos vikings.</em></h2></div><a href="https://api.whatsapp.com/send/?phone=5516992155604&amp;text=Ol%C3%A1+Sabrina%21+%EF%BF%BD%EF%BF%BD%0ATenho+interesse+em+participar+da+gest%C3%A3o+da+XX+de+Mar%C3%A7o.+&amp;type=phone_number&amp;app_absent=0" class="contact-link" target="_blank" rel="noopener noreferrer">Bora conversar <span>↗</span></a></div>
-        <footer class="contact-footer"><a href="#inicio">AAA XX DE MARÇO</a><span>Esporte, união e tradição.</span><a class="partner-link" href="https://www.unifacef.com.br/" target="_blank" rel="noopener noreferrer" aria-label="Visitar o site da Uni-FACEF"><img class="partner-logo" src="assets/uni-facef.png" alt="Uni-FACEF — Centro Universitário Municipal de Franca"></a><span>© 2026</span></footer>
+        <footer class="contact-footer"><a href="#inicio">AAA XX DE MARÇO</a><span>Esporte, união e tradição.</span><a class="partner-link" href="https://www.unifacef.com.br/" target="_blank" rel="noopener noreferrer" aria-label="Visitar o site da Uni-FACEF"><img class="partner-logo" src="assets/images/uni-facef.png" alt="Uni-FACEF — Centro Universitário Municipal de Franca"></a><span>© 2026</span></footer>
       </section>
     </main>
   </div>
@@ -100,8 +102,9 @@
   <dialog class="viking-game" id="viking-game" aria-labelledby="viking-game-title">
     <div class="game-heading"><div><span>DESAFIO DA ATLÉTICA</span><h2 id="viking-game-title">Corrida Viking</h2></div><button class="game-close" type="button" data-game-close aria-label="Fechar jogo">×</button></div>
     <div class="game-stage"><canvas class="game-canvas" data-game-canvas aria-label="Jogo de corrida do Viking"></canvas><div class="game-overlay" data-game-overlay hidden><p data-game-result>Fim de jogo</p><strong data-game-final-score>0000</strong><button type="button" data-game-restart>Jogar novamente <span>↻</span></button></div></div>
-    <div class="game-instructions"><span><b>↑</b> pular</span><span><b>↓</b> descer / agachar</span><span class="touch-instruction">1 toque: pular · 2 toques: descer / agachar</span><span class="keyboard-instruction">Use as setas do teclado</span><span class="game-score" data-game-score>PONTOS&nbsp; 0000</span></div>
+    <div class="game-instructions"><span><b>↑</b> pular</span><span><b>↓</b> descer / agachar</span><span>Salte as bolas baixas e agache nas altas</span><span class="touch-instruction">1 toque: pular · 2 toques: descer / agachar</span><span class="keyboard-instruction">Use as setas do teclado</span><span class="game-score" data-game-score>PONTOS&nbsp; 0000</span></div>
   </dialog>
-  <script src="script.js"></script>
+  <script src="scripts/script.js?v=20261112-7"></script>
+  <script src="scripts/game.js?v=20261112-1"></script>
 </body>
 </html>

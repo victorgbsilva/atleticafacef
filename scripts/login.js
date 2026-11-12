@@ -88,8 +88,8 @@ document.querySelector('#resend-code').addEventListener('click', () => {
 });
 
 const loginBackgrounds = [
-  'assets/conquista.jpeg', 'assets/bandeira.jpeg', 'assets/time-feminino.jpeg',
-  'assets/time-basquete.jpeg', 'assets/equipe-quadra-completa.jpeg', 'assets/equipe-feminina-volei.jpeg'
+  'assets/images/conquista.jpeg', 'assets/images/bandeira.jpeg', 'assets/images/time-feminino.jpeg',
+  'assets/images/time-basquete.jpeg', 'assets/images/equipe-quadra-completa.jpeg', 'assets/images/equipe-feminina-volei.jpeg'
 ];
 const photoLayers = [...document.querySelectorAll('.auth-photo-layer')];
 let photoIndex = 0;
